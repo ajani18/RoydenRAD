@@ -1,64 +1,97 @@
-//Created by RoydenLynch18 on 10/5/2017.
-package org.firstinspires.ftc.robotcontroller.external.samples;
+package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
 
-@TeleOp(name="PushBotTeleOpMode", group="Iterative Opmode")
+/**
+ * Created by RoydenLynch18 on 10/6/2017.
+ */
+
+@TeleOp(name="PushBotTeleOp", group="Linear Opmode")
 //@Disabled
-public class HardwarePushbot
-{
-    // Motor Channel:  Left  Drive Motor:        "left_drive"
-    // Motor Channel:  Right Drive Motor:        "right_drive"
-    // Motor Channel:  Manipulator Drive Motor:  "left_arm"
-    // Servo Channel:  Servo To Open Left Claw:  "left_hand"
-    // Servo Channel:  Servo To Open Right Claw: "right_hand"
 
-    public DcMotor  leftDrive   = null;
-    public DcMotor  rightDrive  = null;
-    public DcMotor  leftArm     = null;
-    public Servo    leftClaw    = null;
-    public Servo    rightClaw   = null;
+public class PushBotTeleOp extends LinearOpMode{
 
-    public static final double MID_SERVO       =  0.5 ;
-    public static final double ARM_UP_POWER    =  0.45 ;
-    public static final double ARM_DOWN_POWER  = -0.45 ;
+    private ElapsedTime runtime = new ElapsedTime();
+    //private Gyroscope imu;
+    private DcMotor leftDrive;
+    private DcMotor rightDrive; // = null;
+    private DcMotor arm; // = null;
+    //private DigitalChannel digitalTouch;
+    //private DistanceSensor sensorColorRange;
+    private Servo leftHand;
+    private Servo rightHand;
 
-    HardwareMap hwMap           =  null;
-    private ElapsedTime period  = new ElapsedTime();
+    @Override
+    public void runOpMode(){
 
-    public HardwarePushbot(){
+        //imu = hardwareMap.get(Gyroscope.class, "imu");
+        leftDrive = hardwareMap.get(DcMotor.class, "leftDrive");
+        rightDrive = hardwareMap.get(DcMotor.class, "rightDrive");
+        arm = hardwareMap.get(DcMotor.class, "arm");
+        //digitalTouch = hardwareMap.get(DigitalChannel.class, "digitalTouch");
+        //sensorColorRange = hardwareMap.get(DistanceSensor.class, "sensorColorRange");
+        leftHand = hardwareMap.get(Servo.class, "leftHand");
+        rightHand = hardwareMap.get(Servo.class, "rightHand");
+
+        leftDrive.setDirection(DcMotor.Direction.FORWARD);
+        rightDrive.setDirection(DcMotor.Direction.REVERSE);
+        //digitalTouch.setMode(DigitalChannel.Mode.INPUT);
+
+        telemetry.addData("Hardware mapped", "Robot initialized.");
+        telemetry.update();
+
+        waitForStart();
+
+        runtime.reset();
+
+        while (opModeIsActive()) {
+            double leftDrivePower;
+            double rightDrivePower;
+            double armPower;
+            double leftHandPower;
+            double rightHandPower;
+
+            double drive = -gamepad1.left_stick_y;
+            double turn = gamepad1.right_stick_x;
+
+            leftDrivePower = Range.clip(drive + turn, -1.0, 1.0);
+            rightDrivePower = Range.clip(drive - turn, -1.0, 1.0);
+            armPower = gamepad2.left_stick_y;
+            leftHandPower = gamepad2.right_stick_y;
+            rightHandPower = -gamepad2.right_stick_y;
+
+            leftDrive.setPower(leftDrivePower);
+            rightDrive.setPower(rightDrivePower);
+            arm.setPower(armPower);
+            leftHand.setPosition(leftHandPower);
+            rightHand.setPosition(rightHandPower);
+
+            telemetry.addData("Status", "Run Time: " + runtime.toString());
+            telemetry.addData("Motors", "Left: (%.2f), Right: (%.2f), Arm: (%.2f)", leftDrivePower, rightDrivePower, armPower);
+            telemetry.addData("Servos", "Left Hand: (%.2f), Right Hand: (%.2f)", leftHandPower, rightHandPower);
+            telemetry.update();
+
+
+
+
+
+        }
 
     }
 
-    public void init(HardwareMap ahwMap) {
-        hwMap = ahwMap;
 
-        leftDrive  = hwMap.get(DcMotor.class, "left_drive");
-        rightDrive = hwMap.get(DcMotor.class, "right_drive");
-        leftArm    = hwMap.get(DcMotor.class, "left_arm");
-        leftDrive.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
-        rightDrive.setDirection(DcMotor.Direction.REVERSE);// Set to FORWARD if using AndyMark motors
 
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
-        leftArm.setPower(0);
 
-        leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        leftArm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        leftClaw  = hwMap.get(Servo.class, "left_hand");
-        rightClaw = hwMap.get(Servo.class, "right_hand");
-        leftClaw.setPosition(MID_SERVO);
-        rightClaw.setPosition(MID_SERVO);
-    }
+
+
+
+
+
 }
-
-
