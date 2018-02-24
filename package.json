@@ -1,0 +1,29 @@
+{
+  "name": "nodeapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "8.9.1"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "d3-time-format": "^2.1.0",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "mongodb": "^2.2.31",
+    "mongoose": "^5.0.3",
+    "morgan": "~1.8.1",
+    "nodemon": "^1.12.1",
+    "pug": "~2.0.0-beta11",
+    "queue": "^4.4.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hhttps://github.com/ajani18/RadEnergy.git"
+  }
+}

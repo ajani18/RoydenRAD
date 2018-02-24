@@ -1,0 +1,160 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Our Project
+    style(type='text/css').
+      html, #page { padding:0; margin:0;}
+      body { margin:0; padding:0; width:100%; color:black; font:normal 12px/2.0em Serif;}
+      h1, h2, h3, h4, h5, h6 {color:black;}
+      #page { background:silver;}
+      #header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+      /* Logo */
+      #logo { padding:10px; width:auto; float:left;}
+      #logo h1 a, h1 a:hover { color:black; text-decoration:none;}
+      #logo h1 span { color:#d3d3f9;}
+      /* Header */
+      #header { background:#fff; }
+      #header-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
+      /* Feature */
+      .feature { background:limegreen;padding:0;}
+      .feature-inner { margin:auto;padding:10px;width:970px;background:limegreen; }
+      .feature-inner h1 {color:#d3d3f9;font-size:32px;text-align:center}
+      /* Menu */
+      #top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+      #top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+      #top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+      #top-nav ul li a { display:block; margin:0; padding:8px 20px; color:black; text-decoration:none;}
+      #top-nav ul li.active a, #top-nav ul li a:hover { color:#d3d3f9;}
+      /* Content */
+      #content-inner { margin:0 auto; padding:10px; width:970px;background:silver;}
+      #content #contentbar { margin:0; padding:0; float:right; width:760px;}
+      #content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
+      #content #sidebar { padding:0; float:left; width:200px;}
+      #content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+      #content #sidebar .widget h3 a { text-decoration:none;}
+      #content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+      #content #sidebar .widget ul li { margin:0;}
+      #content #sidebar .widget ul li { padding:4px 0; width:185px;}
+      #content #sidebar .widget ul li a { color:black; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+      #content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
+      /* Footerblurb */
+      #footerblurb { background:silver;color:black;}
+      #footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#d3d3f9;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
+      #footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+      /* Footer */
+      #footer { background:silver;}
+      #footer-inner { background:silver;margin:auto; text-align:center; padding:12px; width:970px;}
+      #footer a {color:black;text-decoration:none;}
+      /* Clear both sides to assist with div alignment  */
+      .clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+    script(type='text/javascript').
+      /* =============================
+      This script generates sample text for the body content.
+      You can remove this script and any reference to it.
+      ============================= */
+      var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h2>Heading</h2><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
+      function generateText(sentenceCount){
+      for (var i=0; i<sentenceCount; i++)
+      document.write(bodyText[Math.floor(Math.random()*7)]+" ")
+      }
+  body
+    #page
+      header#header
+        #header-inner
+          #logo
+            h1
+              a(href='../')
+                | RAD
+                span Energy
+          #top-nav
+            ul
+              li
+                a(href='/our_project') Our Project
+              li
+                a(href='/education') Education
+              li
+                a(href='/contact') Contact Us
+              li
+                a(href='/example') School Example
+          .clr
+      .feature
+        .feature-inner
+          h1 Our Project
+      #content
+        #content-inner
+          main#contentbar
+            .article
+              h2(align='center') Background of Related Literature
+              h3 Introduction
+              p
+                |Environmental engineering is a field of science where solutions are created to protect people from the adverse effects of environmental issues. The rise of environmental engineering has come across new innovations that are set on improving the way we impact the environment. Creations like solar panels, hydro turbines, and the Nest thermostat provide solutions to help make earth a greener planet. Our project follows a similar pattern by providing solutions for institutions to
+                |foster better energy conservation habits for a more green future. Environmental engineering’s end goal is with new ideas and solutions to protect the human population from the changing environment. Making people understand their habits we hope will help slow the progress of environmental issues and lead the world to a more sustainable future.
+              h3 Background
+              p
+                |The technique, theories, practices, and principles for sustainability and energy efficiency is guided based on what spectrum of the debate people falls under. There is a debate what framework should people and governments have when combating sustainability and energy conservation. The primary sides of the debate is whether to adopt a psychological or an empirical frame of mind. Since the mid-1900s, there has been a constant shift in the debate. Initially, in the mid-1900s, the
+                |United States government opened up public data on the country’s energy consumption. This steered the debate towards empirics rather than a psychological frame of mind (Kandel etal., 2008). As time progressed the data influenced many public policy decisions. The decision was more for economic reasons rather than environmental protection. However, the data did have enormous impacts in mobilizing change to more efficient habits. During the 1990’s many countries implemented
+                |stricter building codes to increase energy efficiency. The decision led to more efficiency in energy consumption for buildings and has had a lasting impact on people’ actions. This was mainly to cope with the oil crisis occurring around the world and offset its effects (IEA, 2008). It demonstrates how the world in 1990’s still had an empirical frame of mind when it came to energy efficiency. Currently, there a number of innovations that are built with an empirical mindset. For
+                |example, the Nest thermostat is used to help consumers more efficiently consume energy based on their previous temperature usage. Using that data they have, Nest hopes to help with energy management and create a more sustainable future.
+              p
+                |In the mid to late 1900’s people failed to understand the impact of their energy consumption would have in the future on the environment. However this changed in the late 2000s, new empirical data showing rising temperature and sea levels instigated a psychological approach to energy consumption (Meyers, 2017). The two leading theories on this side of the debate is the four feedback system theory and the behavioral discontinuity theory. The four feedback system has four facets
+                |in order to create sustainable energy efficiency. One, improving feedback to consumers by making their usage more visible allows them to feel in control of their energy consumption. Two, encouraging good energy habits with incentives and treating electricity as a commodity makes people more inclined to engage in better habits. Three, a psychological stimulus is likely to improve users understanding of energy, and in turn, change their behavior. Four, providing learning
+                |opportunities to help consumers develop effective energy use skills likely encourages behavior changes (Darby, 2010). Also, the habit discontinuity hypothesis explains individuals are more likely to adopt new habits if they are going through a lifestyle change (Verplanken & Wood, 2006). The application of these theories has been minimal as people think they will not be fast enough to curb the changing environment. Yet using many different psychological test, researchers have
+                |concluded that changing people’s behavior is the best way to preserve sustainability.
+              h3 Conclusion
+              p
+                |In the project, we hope to bring both sides of the debate and effectively create a product that produces the best effects from both mindsets. We hope to use the school's data to effectively change people's habits. In our project, we will apply the behavioral discontinuity theory by changing high school students’ habits, so they can bring a similar behavior with them in their future. First, we must utilize the four feedback system theory in order to the lasting effects. Our
+                |product consists of an interactive dashboard, so users feel more in control of their energy habits and provides a psychological stimulus to enact change in their behavior. Also, the dashboard provides consumers with a more educated understanding of their habits. Helping consumers save money creates a shared commonality in treating energy as a commodity. All of these actions together can induce behavioral change for consumers and therefore having a lasting effect. By combining
+                |the behavioral discontinuity theory and four feedback system we believe our product can change people’s energy habits to create lasting change. Our product combines each mindset, which maximizes the potential to alter consumers’ energy habits to create a lasting change.
+
+
+          nav#sidebar
+            .widget
+              h3 Sub-Pages
+              ul
+                li
+                  a(href='/our_project/home') Home
+                li
+                  a(href='/our_project/problem') The Problem and Its Setting
+                li
+                  a(href='/our_project/literature') Background of Related Literature
+                li
+                  a(href='/our_project/research') Research Methodology
+                li
+                  a(href='/our_project/findings') Findings
+                li
+                  a(href='/our_project/conclusions') Summary, Conclusions, and Reccomendations
+                li
+                  a(href='/our_project/bibliography') Bibliography
+          .clr
+      #footerblurb
+        #footerblurb-inner
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .clr
+      footer#footer
+        #footer-inner
+          p
+            | © Copyright 
+            a(href='#') Your Site
+            |  
+            a(href='#') Terms of Use
+            |  
+            a(href='#') Privacy Policy
+          .clr

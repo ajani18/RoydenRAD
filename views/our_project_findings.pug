@@ -1,0 +1,156 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Our Project
+    style(type='text/css').
+      html, #page { padding:0; margin:0;}
+      body { margin:0; padding:0; width:100%; color:black; font:normal 12px/2.0em Serif;}
+      h1, h2, h3, h4, h5, h6 {color:black;}
+      #page { background:silver;}
+      #header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+      /* Logo */
+      #logo { padding:10px; width:auto; float:left;}
+      #logo h1 a, h1 a:hover { color:black; text-decoration:none;}
+      #logo h1 span { color:#d3d3f9;}
+      /* Header */
+      #header { background:#fff; }
+      #header-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
+      /* Feature */
+      .feature { background:limegreen;padding:0;}
+      .feature-inner { margin:auto;padding:10px;width:970px;background:limegreen; }
+      .feature-inner h1 {color:#d3d3f9;font-size:32px;text-align:center}
+      /* Menu */
+      #top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+      #top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+      #top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+      #top-nav ul li a { display:block; margin:0; padding:8px 20px; color:black; text-decoration:none;}
+      #top-nav ul li.active a, #top-nav ul li a:hover { color:#d3d3f9;}
+      /* Content */
+      #content-inner { margin:0 auto; padding:10px; width:970px;background:silver;}
+      #content #contentbar { margin:0; padding:0; float:right; width:760px;}
+      #content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
+      #content #sidebar { padding:0; float:left; width:200px;}
+      #content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+      #content #sidebar .widget h3 a { text-decoration:none;}
+      #content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+      #content #sidebar .widget ul li { margin:0;}
+      #content #sidebar .widget ul li { padding:4px 0; width:185px;}
+      #content #sidebar .widget ul li a { color:black; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+      #content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
+      /* Footerblurb */
+      #footerblurb { background:silver;color:black;}
+      #footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#d3d3f9;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
+      #footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+      /* Footer */
+      #footer { background:silver;}
+      #footer-inner { background:silver;margin:auto; text-align:center; padding:12px; width:970px;}
+      #footer a {color:black;text-decoration:none;}
+      /* Clear both sides to assist with div alignment  */
+      .clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+    script(type='text/javascript').
+      /* =============================
+      This script generates sample text for the body content.
+      You can remove this script and any reference to it.
+      ============================= */
+      var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h2>Heading</h2><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
+      function generateText(sentenceCount){
+      for (var i=0; i<sentenceCount; i++)
+      document.write(bodyText[Math.floor(Math.random()*7)]+" ")
+      }
+  body
+    #page
+      header#header
+        #header-inner
+          #logo
+            h1
+              a(href='../')
+                | RAD
+                span Energy
+          #top-nav
+            ul
+              li
+                a(href='/our_project') Our Project
+              li
+                a(href='/education') Education
+              li
+                a(href='/contact') Contact Us
+              li
+                a(href='/example') School Example
+          .clr
+      .feature
+        .feature-inner
+          h1 Our Project
+      #content
+        #content-inner
+          main#contentbar
+            .article
+              h2(align="center") The Findings
+              h3 Introduction
+              p
+                |For about a month RAD Energy Console prototype has been in the makerspace collecting data. The data collected provides a holistic understanding on the energy habits of the makerspace.  The data gathered includes temperature, relative humidity, occupancy, and light status. The DHT11 temperature and humidity sensor was able to provide insight to how the temperature and humidity fluctuated each day. The sensor measures live temperature in Fahrenheit and the relative humidity,
+                |which is amount of the moisture in the air compared to what the air can hold. Light status and occupancy in the makerspace were collected to find the duration the lights are on and whether someone is in the makerspace. The primary problem was finding a good position in the makerspace to place the prototype. This was important to get a good view on the class to track occupancy. The occupancy data is not very accurate and there have been new tests to find the best placement to
+                |get the most accurate reading. 
+              p
+                |*insert data table + graph*
+              h3 Interpretation and Discussion
+              p
+                |Above is the raw data collected of the makerspace from November 15th to December 1st. the data above is the average raw data from the days the prototype collected data. The reason to choose the average is, one, for convenience. At this moment, the prototype has collected and stored over 24,000 data points, many of which are repeats. Taking average for temperature and humidity provides an easy summary to understand the energy statistics that occurred each day without showing
+                |each and every data point. The standard deviation for temperature is about 5.35 and for humidity is 8.47. One reason why the standard deviation is higher is because November 16, 2017 was an outlier for humidity. Also, the humidity drops from November 16th to November 20th significantly due to external factors. Primarily, during the days after November 16th New Orleans experienced a period of cold weather driving down the humidity outside and inside. From the data collected it
+                |not possible yet to make any meaningful conclusions. To analyze the data and draw any conclusions, there has be more time where patterns start to develop and makes the necessary changes to get accurate data on energy use. 
+              h3 Closure
+              p
+                |The RAD Energy Console prototype has been in the makerspace for about a month. It has collected data such as temperature, humidity, light status, and occupancy. It has gathered numerous data points, many repeats, and makes calculating a mean for a given day as the best summary statistic. The mean is changed more by outliers than median and shows if any major changes had occurred for temperature and humidity. Also, we collected a data on light status, which shows how many hours
+                |the light has been on. However, collecting data for detecting occupancy is proving to be difficult because, currently, there is no position in the makerspace that allows the camera to get a full view of the classroom. There are new positions being tested that gives the camera the best view to detect occupancy. 
+                
+                
+          nav#sidebar
+            .widget
+              h3 Sub-Pages
+              ul
+                li
+                  a(href='/our_project/home') Home
+                li
+                  a(href='/our_project/problem') The Problem and Its Setting
+                li
+                  a(href='/our_project/literature') Background of Related Literature
+                li
+                  a(href='/our_project/research') Research Methodology
+                li
+                  a(href='/our_project/findings') Findings
+                li
+                  a(href='/our_project/conclusions') Summary, Conclusions, and Reccomendations
+                li
+                  a(href='/our_project/bibliography') Bibliography
+          .clr
+      #footerblurb
+        #footerblurb-inner
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .clr
+      footer#footer
+        #footer-inner
+          p
+            | © Copyright 
+            a(href='#') Your Site
+            |  
+            a(href='#') Terms of Use
+            |  
+            a(href='#') Privacy Policy
+          .clr

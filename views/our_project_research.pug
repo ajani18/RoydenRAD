@@ -1,0 +1,169 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Our Project
+    style(type='text/css').
+      html, #page { padding:0; margin:0;}
+      body { margin:0; padding:0; width:100%; color:black; font:normal 12px/2.0em Serif;}
+      h1, h2, h3, h4, h5, h6 {color:black;}
+      #page { background:silver;}
+      #header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+      /* Logo */
+      #logo { padding:10px; width:auto; float:left;}
+      #logo h1 a, h1 a:hover { color:black; text-decoration:none;}
+      #logo h1 span { color:#d3d3f9;}
+      /* Header */
+      #header { background:#fff; }
+      #header-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
+      /* Feature */
+      .feature { background:limegreen;padding:0;}
+      .feature-inner { margin:auto;padding:10px;width:970px;background:limegreen; }
+      .feature-inner h1 {color:#d3d3f9;font-size:32px;text-align:center}
+      /* Menu */
+      #top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+      #top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+      #top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+      #top-nav ul li a { display:block; margin:0; padding:8px 20px; color:black; text-decoration:none;}
+      #top-nav ul li.active a, #top-nav ul li a:hover { color:#d3d3f9;}
+      /* Content */
+      #content-inner { margin:0 auto; padding:10px; width:970px;background:silver;}
+      #content #contentbar { margin:0; padding:0; float:right; width:760px;}
+      #content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
+      #content #sidebar { padding:0; float:left; width:200px;}
+      #content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+      #content #sidebar .widget h3 a { text-decoration:none;}
+      #content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+      #content #sidebar .widget ul li { margin:0;}
+      #content #sidebar .widget ul li { padding:4px 0; width:185px;}
+      #content #sidebar .widget ul li a { color:black; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+      #content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
+      /* Footerblurb */
+      #footerblurb { background:silver;color:black;}
+      #footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#d3d3f9;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
+      #footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+      /* Footer */
+      #footer { background:silver;}
+      #footer-inner { background:silver;margin:auto; text-align:center; padding:12px; width:970px;}
+      #footer a {color:black;text-decoration:none;}
+      /* Clear both sides to assist with div alignment  */
+      .clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+    script(type='text/javascript').
+      /* =============================
+      This script generates sample text for the body content.
+      You can remove this script and any reference to it.
+      ============================= */
+      var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h2>Heading</h2><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
+      function generateText(sentenceCount){
+      for (var i=0; i<sentenceCount; i++)
+      document.write(bodyText[Math.floor(Math.random()*7)]+" ")
+      }
+  body
+    #page
+      header#header
+        #header-inner
+          #logo
+            h1
+              a(href='../')
+                | RAD
+                span Energy
+          #top-nav
+            ul
+              li
+                a(href='/our_project') Our Project
+              li
+                a(href='/education') Education
+              li
+                a(href='/contact') Contact Us
+              li
+                a(href='/example') School Example
+          .clr
+      .feature
+        .feature-inner
+          h1 Our Project
+      #content
+        #content-inner
+          main#contentbar
+            .article
+              h2(align='center') Research Methodology
+              h3 Introduction
+              p
+                |The core element of the project is centered on the RAD Energy Console, which includes a Raspberry Pi connected to a temperature and humidity sensor, light sensor, and occupancy sensor. These instruments will allow us to evaluate the different factors and a classroom’s impact on the school’s energy consumption. These instruments will send data to a database on an hourly basis where it will then be displayed on an interactive dashboard. The dashboard will allow students and
+                |teachers to compare the data in different sequences and ways that give them true insight into their energy habits. For example, they can see if there is a relationship between humidity and the temperature or whether someone is in the room at given time in a specific room at any span of time. Our goal is to create a change in their energy habits if teachers and students can visually see their energy usage. Mainly because of monetary limitations we are going to be limited to five
+                |classrooms, so we’ve carefully chosen classrooms that are representative of specific areas of the school. We will test the RAD Energy Console by putting it in classes where we are able to assess its true impact on the school’s energy consumption. Our ultimate goal is to alter students and teachers behavior by allowing them to see their effects on the school’s energy consumption with the RAD Energy Console. 
+              h3 Instrumentation and Variables
+              p
+                |The project is made up of many variables including change in humidity/temperature, occupancy/light status, and amount of energy being consumed.
+              p
+                |*insert image
+              p •    The instrument circled in red above is the night vision camera. Through the magical powers of coding, we were able to convert the camera into an occupancy sensor. This was done by having a function take a picture in the code which was defined by the change in pixels in a given border of the camera’s frame. This is ultimately used to send points to the database whether someone is in the classroom or not.
+              p •    The instrument circled in green is the temperature/humidity sensor. This DHT11 sensor doubles as a humidity and temperature sensor, which are intended to send their current status to the database where the data well be filtered in a more meaningful way. This data being collected is some of the most significant because weather control is where the most amount of energy consumption occurs.
+              p •    The instrument circled in yellow is the light sensor. This is a simple sensor which indicates whether the lights are on or off. The sole purpose of the light sensor is to communicate with the occupancy sensor. So that if the occupancy sensor detected that the room was empty and the lights were on then it would send a message to the teacher of the room.
+              p •    The instrument circled in blue is the Raspberry Pi Zero. This is the most important part of the project because this minicomputer is what will be storing and sending all of our data to the database. It is also used to write and run the code for all of the sensors attached.
+              p •    The instrument circled in magenta is the breadboard where all of the sensor and pins of the Raspberry Pi are connected.
+              h3 Statistical Procedures
+              p
+                |*insert image
+              p
+                |We are primarily using mean, standard deviation, and z-score as our statistical methods to truly understand Newman’s energy consumption. We are using mean as a way to measure the amount of electricity being used per month and year. It provides a more accurate measurement compared to the median because mean is more heavily influenced by outliers, which means any outliers will be taken into account with the mean. The way we measure our success is to calculate the z-score compared
+                |to average electricity usage per month and see if the number turns out to be negative. Thus, if the number is negative then that particular month’s electricity usage is smaller than the average monthly electricity usage.
+              h3 The Assumptions
+              p
+                |For our project it is very hard to make assumptions because of how it covers different areas of the school. The specific chosen areas of the school are so different, which makes having assumptions very hard to definitely say. We will cover the Lemle, Saratoga, lower school, Heymann buildings, and the Makerspace Also, because our project is still in development; thus, we don’t have the information to make concrete assumptions. The information we currently have is only applicable
+                |to the entire school, so we don’t have the data yet to conclude anything on a classroom basis.  
+              h3 Closure
+              p
+                |A central aspect of our project is the data concerning the school's energy consumption. By using the Raspberry Pi connected to sensors, we think we can gain individualized insight into a classrooms energy habits. This way students and teacher can fully understand their habits and adjust their behavior to help drive down costs and the school's environmental footprint. The classrooms we have chosen have the ability to change their temperature with their thermostat and light
+                |status. Our dashboard will provide students and teachers an interactive area where they can learn for themselves the impact of their decisions. Through the RAD Energy Console and dashboard, we hope to gain better insight into classroom habits and hopefully enact meaningful change.
+                
+                
+          nav#sidebar
+            .widget
+              h3 Sub-Pages
+              ul
+                li
+                  a(href='/our_project/home') Home
+                li
+                  a(href='/our_project/problem') The Problem and Its Setting
+                li
+                  a(href='/our_project/literature') Background of Related Literature
+                li
+                  a(href='/our_project/research') Research Methodology
+                li
+                  a(href='/our_project/findings') Findings
+                li
+                  a(href='/our_project/conclusions') Summary, Conclusions, and Reccomendations
+                li
+                  a(href='/our_project/bibliography') Bibliography
+          .clr
+      #footerblurb
+        #footerblurb-inner
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .clr
+      footer#footer
+        #footer-inner
+          p
+            | © Copyright 
+            a(href='#') Your Site
+            |  
+            a(href='#') Terms of Use
+            |  
+            a(href='#') Privacy Policy
+          .clr

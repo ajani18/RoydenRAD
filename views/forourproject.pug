@@ -1,0 +1,44 @@
+extends layout
+
+block content
+
+  h1= title
+  p Welcome to #{title}
+
+  div(class="centerDiv")
+    div(class="innerCenterDiv row")
+      div(id="filterSide" class="col-2")
+         button(type="button" class="btn btn-primary filter" onclick="graphHumidity()") Humidity
+         h4 Press Any Button to Change the Graph
+         button(type="button" class="btn btn-primary filter" onclick="graphTemp()") Temperature
+      div(id="chart" class="col-7")
+      div(class="col-3" id="tracker")
+        div(class="alert alert-warning" role="alert") Total kWH Used:
+          span(id="kWhUsed")
+    div(class="innerCenterDiv row")
+      div(class="col-4")
+        h4 Live Feed
+        div(class="alert alert-danger" role="alert") Temperature:
+          span(id="templf")
+        div(class="alert alert-primary" role="alert") Humidity:
+              span(id="humiditylf")
+        div(class="alert alert-warning" role="alert") Light:
+          span(id="lightlf")
+        div(class="alert alert-success" role="alert") Occupancy:
+          span(id="occupancylf")
+          span(id="Occupancy")
+      div(class="col-4")
+        h4 Daily Stats
+        div(class="alert alert-danger" role="alert") Average Temperature:
+          span(id="AverageTemp")
+        div(class="alert alert-primary" role="alert") Average Humidity:
+          span(id="averageHumid")
+
+
+      div(class="col-4")
+        h4 Recommendations
+
+
+  script(src='/javascripts/d3.js')
+  script(src='/javascripts/queue.js')
+  script(src='/javascripts/dataVisual.js')

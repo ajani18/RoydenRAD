@@ -1,0 +1,171 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Our Project
+    style(type='text/css').
+      html, #page { padding:0; margin:0;}
+      body { margin:0; padding:0; width:100%; color:black; font:normal 12px/2.0em Serif;}
+      h1, h2, h3, h4, h5, h6 {color:black;}
+      #page { background:silver;}
+      #header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+      /* Logo */
+      #logo { padding:10px; width:auto; float:left;}
+      #logo h1 a, h1 a:hover { color:black; text-decoration:none;}
+      #logo h1 span { color:#d3d3f9;}
+      /* Header */
+      #header { background:#fff; }
+      #header-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
+      /* Feature */
+      .feature { background:limegreen;padding:0;}
+      .feature-inner { margin:auto;padding:10px;width:970px;background:limegreen; }
+      .feature-inner h1 {color:#d3d3f9;font-size:32px;text-align:center}
+      /* Menu */
+      #top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
+      #top-nav ul { list-style:none; padding:0; height:37px; float:left;}
+      #top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
+      #top-nav ul li a { display:block; margin:0; padding:8px 20px; color:black; text-decoration:none;}
+      #top-nav ul li.active a, #top-nav ul li a:hover { color:#d3d3f9;}
+      /* Content */
+      #content-inner { margin:0 auto; padding:10px; width:970px;background:silver;}
+      #content #contentbar { margin:0; padding:0; float:right; width:760px;}
+      #content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
+      #content #sidebar { padding:0; float:left; width:200px;}
+      #content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
+      #content #sidebar .widget h3 a { text-decoration:none;}
+      #content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+      #content #sidebar .widget ul li { margin:0;}
+      #content #sidebar .widget ul li { padding:4px 0; width:185px;}
+      #content #sidebar .widget ul li a { color:black; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+      #content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
+      /* Footerblurb */
+      #footerblurb { background:silver;color:black;}
+      #footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#d3d3f9;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
+      #footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+      /* Footer */
+      #footer { background:silver;}
+      #footer-inner { background:silver;margin:auto; text-align:center; padding:12px; width:970px;}
+      #footer a {color:black;text-decoration:none;}
+      /* Clear both sides to assist with div alignment  */
+      .clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
+    script(type='text/javascript').
+      /* =============================
+      This script generates sample text for the body content.
+      You can remove this script and any reference to it.
+      ============================= */
+      var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h2>Heading</h2><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
+      function generateText(sentenceCount){
+      for (var i=0; i<sentenceCount; i++)
+      document.write(bodyText[Math.floor(Math.random()*7)]+" ")
+      }
+  body
+    #page
+      header#header
+        #header-inner
+          #logo
+            h1
+              a(href='../')
+                | RAD
+                span Energy
+          #top-nav
+            ul
+              li
+                a(href='/our_project') Our Project
+              li
+                a(href='/education') Education
+              li
+                a(href='/contact') Contact Us
+              li
+                a(href='/example') School Example
+          .clr
+      .feature
+        .feature-inner
+          h1 Our Project
+      #content
+        #content-inner
+          main#contentbar
+            .article
+              h2(align='center') The Problem and Its Setting
+              h3 Introduction
+              p
+                |Environmental issues are currently at the center of our political, economic, and social discussions worldwide. The world’s industries have been increasingly using large amounts of energy in order to power their production. Numerous universities have taken the lead for a more energy efficient world by implementing solar panels, tracking their energy usage, implementing new light bulbs, and creating more energy efficient labs. Our project is to bring these solutions to many
+                |different institutions such as schools, homes, churches, and hospitals. We hope to provide these institutions a cost effective route to energy management in a way that educates everyone about their usage. By creating simple DIY sensors anyone can assemble to track their data, we hope to reduce their energy costs by helping them understand their habits and patterns. We feel that reducing monthly energy bills will help push people’s attitude towards a more green future.
+                |Following the path of universities, we hope to implement energy solutions with a number of different sensors to reduce energy costs.
+              h3 Purpose
+              p
+                |RAD is the name for the project that Royden, Abhi, and Dylon have undertaken for the upcoming Science Fair. The project is oriented around the central concept of commercial energy, with a specialized focus on Isidore Newman School as the test case. The purpose of our project is to provide energy solutions to a number of different institutions at a cost effective manner. By providing simple DIY sensors to allow people to track their usage it will ultimately lead to better energy
+                |habits and lower energy costs. Also, building the sensors to reduce their monthly energy bills will help change people’s attitudes about energy. There is need for this because there is waste and inefficiencies in different places such as churches, homes, and schools, which can help lead a more green future. Also, this is the best way to ensure future success by helping people have a deeper understanding of their habits. Our project is a cost efficient tool that can help ensure
+                |a more green future for the world.
+              h3 Engineering/Design Goal
+              p 1.	Design a comprehensive dashboard in which students and teacher can easily engage and understand their energy usage
+              p 2.	Help Isidore Newman reduce its monthly energy bills and provide solutions to maintain it 
+              p 3.	Create RaspberryPi with sensors that will feed data from classrooms to our server – where we will make meaningful decisions based on data collected for the school
+              p 4.	Create interactive website where other schools and homeowners can implement similar solutions.
+              h3 Sub-Problems
+              p 1.	Design and engineer RAD sensor modules which houses a temperature, humidity, and light sensors that will show status of each. Modules will also contain a camera which serves an occupancy sensor displaying if the classroom is in use. 
+              p 2.	Create a central server in which the RAD sensor modules from around the school will communicate with. It will be able to store the live data from the classrooms and provide teachers easy access to their energy usage.
+              p 3.	Develop easy-to-use web application and dashboard for teachers and students. This web app will provide energy data and statistical visualization in an understandable manner, through graphs and charts. It will also send notifications to teachers regarding the status of their energy use if the sensor notices anything off putting. For example, if no one were in the room but the lights were on, the web app would notify the teacher which the room belongs to. 
+              p 4.	Generalize solutions and promote development of our systems on other campuses to become a model for a better student-led energy management
+              h3 Limitations and Constraints
+              p 1.	A limitation would be sending live data feed from the sensors to the database.
+              p 2.	Another limitation would be computing this data in a way that will connect our data to people, with the capability to send an empowering message,, and with the best presentation possible.
+              p 3.	Connecting all phases (data analysis, engineer sensors, web development) will be difficult since we have never done anything to this capacity. 
+              h3 Definitions/Terms/Abbreviations
+              p RAD - Royden, Abhi, and Dylon
+              p Capacity Factor - capacity factor is the unit less ratio of an actual electrical energy output over a given period of time to the maximum possible electrical energy output over the same amount of time.
+              p Raspberry Pi – Is a low cost, credit-card sized computer that runs the Linux operating system. It enables people to use its different functionalities in diverse areas of everyday life.
+              h3 Conclusion
+              p
+                |Ultimately, our mission is to provide people with an easy route to efficient energy management in a way that engages people. The only way to have a successful green future is to start now, to ensure costs and environmental benefits can be achieved in the long run. We would in the end want schools, churches, houses, hospitals, etc. to lessen their environmental impact leading to savings in finances. We think that increasing energy efficiency with our solutions in these
+                |institutions will lead the world to a more green future. We currently have all necessary data from .Newman regarding energy use, almost completely finished our RAD sensor modules, and are on route to setting up our database and web application. Our project is well on its way and we are looking forward to completing the next phase.
+
+          nav#sidebar
+            .widget
+              h3 Sub-Pages
+              ul
+                li
+                  a(href='/our_project/home') Home
+                li
+                  a(href='/our_project/problem') The Problem and Its Setting
+                li
+                  a(href='/our_project/literature') Background of Related Literature
+                li
+                  a(href='/our_project/research') Research Methodology
+                li
+                  a(href='/our_project/findings') Findings
+                li
+                  a(href='/our_project/conclusions') Summary, Conclusions, and Reccomendations
+                li
+                  a(href='/our_project/bibliography') Bibliography
+          .clr
+      #footerblurb
+        #footerblurb-inner
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .column
+            h2
+              span Heading
+            p
+              script.
+                generateText(2)
+          .clr
+      footer#footer
+        #footer-inner
+          p
+            | © Copyright 
+            a(href='#') Your Site
+            |  
+            a(href='#') Terms of Use
+            |  
+            a(href='#') Privacy Policy
+          .clr

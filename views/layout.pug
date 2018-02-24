@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="")
+    meta( name="author" content="")
+    title Simple Sidebar - Start Bootstrap Template 
+    link(href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet")
+    link(href="/stylesheets/simple-sidebar.css" rel="stylesheet")
+    link(href="/stylesheets/graphStyle.css" rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    script(src="http://d3js.org/d3.v3.min.js")
+    script(src="https://d3js.org/d3-time-format.v2.min.js")
+
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    // Bootstrap Core CSS
+    // MetisMenu CSS
+    //- link(href='/vendor/metisMenu/metisMenu.min.css', rel='stylesheet')
+    //- // Custom CSS
+    //- link(href='/dist/css/sb-admin-2.css', rel='stylesheet')
+    //- // Morris Charts CSS
+    //- link(href='/vendor/morrisjs/morris.css', rel='stylesheet')
+    //- // Custom Fonts
+    //- link(href='/vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+
+    
+  body
+
+    div(id='wrapper')
+      div(class="container-fluid")
+
+        div(id="sidebar-wrapper")
+            ul(class="sidebar-nav")
+                li(class="sidebar-brand")
+                    a(href="")
+                      Start Choose Option
+                li
+                  a(href="/classes/mrjones") Mr.Jones
+                li
+                  a(href="/about") About
+                li
+                  a(href="/classes/makerspace") Makerspace 
+                li 
+                  a(href="mrmalis") Mr. Malis
+                      
+  
+        div(id="page-content-wrapper")
+          a(href="#" id="menu-toggle" class="btn btn-lg")
+            span(class="glyphicon glyphicon-align-justify")
+          div(style="width: 199px;")
+          iframe(style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=81446" width="199" height="62" frameborder="0" scrolling="no")
+          
+          block content
+         
+      
+    
+    footer 
+      //script(src="/javascripts/dataVisual.js")
+      script(src="/vendor/jquery/jquery.min.js")
+      script(scr='/javascripts/buttonToggle.js')
+      script(src="/vendor/popper/popper.min.js")
+      script(src="/vendor/bootstrap/js/bootstrap.min.js") 
+      script.
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            console.log("change!");
+        });
+      script(src='../vendor/jquery/jquery.min.js')
+      
+
+    //pug is a view engine that helps see html 
+        
+      
+      
+
+    
